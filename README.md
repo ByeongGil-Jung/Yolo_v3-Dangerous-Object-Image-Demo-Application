@@ -1,6 +1,6 @@
 # Yolo v3 - Demo Application (AIHub - Dangerous Object Image Dataset)
 
-![demo_application](https://github.com/ByeongGil-Jung/Yolo_v3-Dangerous-Object-Image-Demo-Application/tree/master/github/img/thumbnail.png)
+![demo_application](https://github.com/ByeongGil-Jung/Yolo_v3-Dangerous-Object-Image-Demo-Application/blob/master/github/img/thumbnail.png)
 
 ## Introduction
 Yolo v3 를 활용한 데모 어플리케이션입니다.  

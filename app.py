@@ -14,15 +14,15 @@ app = Flask(__name__)
 
 
 model_api = ModelAPI(
-    image_folder=os.path.join(APPLICATION_PROPERTIES.YOLO_MODULE_PATH, "data", "samples"),
-    model_def=os.path.join(APPLICATION_PROPERTIES.YOLO_MODULE_PATH, "config", "yolov3-custom.cfg"),
-    weights_path=os.path.join(APPLICATION_PROPERTIES.YOLO_MODULE_PATH, "checkpoints", "yolov3_ckpt_150.pth"),
-    class_path=os.path.join(APPLICATION_PROPERTIES.YOLO_MODULE_PATH, "data", "custom", "classes.names"),
-    conf_thres=0.8,
-    nms_thres=0.4,
-    batch_size=1,
-    n_cpu=0,
-    img_size=416,
+    image_folder=APPLICATION_PROPERTIES.SAMPLE_DIRECTORY_PATH,
+    model_def=APPLICATION_PROPERTIES.MODEL_CONFIG_FILE_PATH,
+    weights_path=APPLICATION_PROPERTIES.MODEL_CHECKPOINTS_DIRECTORY_PATH,
+    class_path=APPLICATION_PROPERTIES.CLASS_LIST_FILE_PATH,
+    conf_thres=APPLICATION_PROPERTIES.CONFIDENCE_THRESHOLD,
+    nms_thres=APPLICATION_PROPERTIES.NON_MAX_SUPPRESSION_THRESHOLD,
+    batch_size=APPLICATION_PROPERTIES.BATCH_SIZE,
+    n_cpu=APPLICATION_PROPERTIES.N_CPU,
+    img_size=APPLICATION_PROPERTIES.IMG_SIZE,
     device=ModelAPI.DEVICE_GPU
 )
 

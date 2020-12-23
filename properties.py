@@ -49,9 +49,20 @@ class ApplicationProperties:
     INFERENCE_SAMPLE_DIRECTORY_PATH = os.path.join(YOLO_MODULE_PATH, "data", "inference_samples")
     INFERENCE_DIRECTORY_PATH = os.path.join(YOLO_MODULE_PATH, "output")
 
+    MODEL_CONFIG_FILE_PATH = os.path.join(YOLO_MODULE_PATH, "config", "yolov3-custom.cfg")
+    MODEL_CHECKPOINTS_DIRECTORY_PATH = os.path.join(YOLO_MODULE_PATH, "checkpoints", "yolov3_ckpt.pth")
+    CLASS_LIST_FILE_PATH = os.path.join(YOLO_MODULE_PATH, "data", "custom", "classes.names")
+
     DEFAULT_RANDOM_SEED = 777
 
     DEVICE_CPU = "cpu"
+
+    # Inference parameters
+    CONFIDENCE_THRESHOLD = 0.8
+    NON_MAX_SUPPRESSION_THRESHOLD = 0.4
+    BATCH_SIZE = 1
+    N_CPU = 0
+    IMG_SIZE = 416
 
     def __post_init__(self):
         Configuration.apply(random_seed=self.DEFAULT_RANDOM_SEED)

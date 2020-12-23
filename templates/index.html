@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Yolo v3 - Detecting Dangerous Object Image, Demo Application</title>
+    <link rel="shortcut icon" href="/static/img/favicon.ico">
+    <link type="text/css" rel="stylesheet" href="/static/css/bootstrap.css"/>
+</head>
+<script src="/static/js/bootstrap.js" type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="/static/js/index.js"></script>
+<body>
+    <nav class="mt-2 mb-2">
+        <div class="container">
+            <h2>Yolo v3 - Detecting Dangerous Object Image, Demo Application</h2>
+        </div>
+    </nav>
+    <div class="container">
+        <!-- Image list -->
+        <div class="row">
+            <div class="col-md-3" id="sample-img-lists-div-id">
+                <div class="row mb-2">
+                    <select class="form-control" id="sample-img-filenames-select-id" size="15">
+                        {% for sample_img_filename in sample_img_filename_list %}
+                            <option value="{{ sample_img_filename }}">{{ sample_img_filename }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="row mb-2 ml-3">
+                    <div class="col-md-5 ml-3">
+                        <button type="button" class="btn btn-success" id="view-btn-id">View</button>
+                    </div>
+                    <div class="col-md-5">
+                        <button type="button" class="btn btn-success" id="inference-btn-id">Inference</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <textarea class="text-left border" id="result-text-id" readonly="readonly" rows="8">Ready</textarea>
+                </div>
+            </div>
+            <!-- Inference result -->
+            <div class="col-md-9" id="inference-div-id">
+                <img class="img-responsive img-thumbnail" id="show-img-id" src="">
+            </div>
+        </div>
+    </div>
+    <footer class="container-fluid navbar-fixed-bottom">
+        <div class="container">
+            <p>Korea University, AI Research Lab</p>
+        </div>
+    </footer>
+</body>
+</html>

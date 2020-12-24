@@ -45,7 +45,7 @@ Chisel
 
 #### - 새로 학습한 모델을 사용하고자 할 경우
 1. 판정을 위한 모델을 `/model/yolov3/checkpoints` 로 옮긴 뒤, 파일 명을 `yolov3_ckpt.pth` 로 바꿉니다.
-2. 학습을 수행했던 모듈의 `/model/yolov3/config` 폴더와 `/model/yolov3/data/custom` 폴더를 현재 모듈로 옮깁니다.
+2. 학습을 수행했던 모듈의 `/config` , `/data/custom` 폴더를 현재 모듈의 `/model/yolov3/config` , `/model/yolov3/data/custom` 폴더와 바꿉니다.
 3. 판정을 원하는 이미지들을 `/model/yolov3/data/samples` 에 삽입합니다.
 4. 추가로 세부적으로 파라미터를 조정하고자 할 경우, `/properties.py` 를 참조하여 수정합니다.
 
@@ -66,15 +66,15 @@ model_api = ModelAPI(
 ```
 
 ## How to run
-- 파이썬 디펜던시 설치
+(1) 파이썬 디펜던시 설치
 ```
 pip3 install -r ./requirements.txt
 ```
-- Flask 웹 어플리케이션 실행
+(2) Flask 웹 어플리케이션 실행
 ```
 python3 ./app.py
 ```
-- 접근  
+(3) 접근  
 (Default port : 5000)
 ```
 http://localhost:5000

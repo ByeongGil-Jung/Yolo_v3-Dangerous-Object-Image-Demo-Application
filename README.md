@@ -13,7 +13,7 @@ Yolo v3 를 활용한 데모 어플리케이션입니다.
 
 ## Prerequisite
 #### - 사전 학습된 모델을 그대로 사용하고자 할 경우
-1. 사전 학습된 모델을 사용하고 싶을 경우, `/model/yolov3/checkpoints` 폴더의 `pretrained_yolov3_model.zip` 의 압축을 풉니다.
+1. 사전 학습된 모델을 사용하고 싶을 경우, `/model/yolov3/checkpoints` 폴더의 `yolov3_ckpt.zip` 의 압축을 풉니다.
 2. 추가로 판정을 원하는 이미지가 있을 경우, `/model/yolov3/data/samples` 에 해당 이미지들을 삽입합니다.  
 
 > 해당 모델은 Astrophysics 머신의 데이터셋만 사용하였습니다.  
